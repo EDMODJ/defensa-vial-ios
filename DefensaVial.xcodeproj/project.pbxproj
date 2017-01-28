@@ -13,6 +13,10 @@
 		713BC2E01E3D19710008616D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 713BC2DE1E3D19710008616D /* Main.storyboard */; };
 		713BC2E21E3D19710008616D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 713BC2E11E3D19710008616D /* Assets.xcassets */; };
 		713BC2E51E3D19710008616D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 713BC2E31E3D19710008616D /* LaunchScreen.storyboard */; };
+		713BC2EE1E3D1E320008616D /* QueSaber.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 713BC2EC1E3D1E320008616D /* QueSaber.storyboard */; };
+		713BC2F11E3D1E540008616D /* QueHacer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 713BC2EF1E3D1E540008616D /* QueHacer.storyboard */; };
+		713BC2F41E3D1E9A0008616D /* ComoProceder.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 713BC2F21E3D1E9A0008616D /* ComoProceder.storyboard */; };
+		71F6F6951E3D54F40041BF4F /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F6F6941E3D54F40041BF4F /* ThirdViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		713BC2E11E3D19710008616D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		713BC2E41E3D19710008616D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		713BC2E61E3D19710008616D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		713BC2ED1E3D1E320008616D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/QueSaber.storyboard; sourceTree = "<group>"; };
+		713BC2F01E3D1E540008616D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/QueHacer.storyboard; sourceTree = "<group>"; };
+		713BC2F31E3D1E9A0008616D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ComoProceder.storyboard; sourceTree = "<group>"; };
+		71F6F6941E3D54F40041BF4F /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +67,11 @@
 				713BC2D81E3D19710008616D /* AppDelegate.swift */,
 				713BC2DA1E3D19710008616D /* FirstViewController.swift */,
 				713BC2DC1E3D19710008616D /* SecondViewController.swift */,
+				71F6F6941E3D54F40041BF4F /* ThirdViewController.swift */,
 				713BC2DE1E3D19710008616D /* Main.storyboard */,
+				713BC2EC1E3D1E320008616D /* QueSaber.storyboard */,
+				713BC2EF1E3D1E540008616D /* QueHacer.storyboard */,
+				713BC2F21E3D1E9A0008616D /* ComoProceder.storyboard */,
 				713BC2E11E3D19710008616D /* Assets.xcassets */,
 				713BC2E31E3D19710008616D /* LaunchScreen.storyboard */,
 				713BC2E61E3D19710008616D /* Info.plist */,
@@ -127,8 +139,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				713BC2F11E3D1E540008616D /* QueHacer.storyboard in Resources */,
 				713BC2E51E3D19710008616D /* LaunchScreen.storyboard in Resources */,
+				713BC2F41E3D1E9A0008616D /* ComoProceder.storyboard in Resources */,
 				713BC2E21E3D19710008616D /* Assets.xcassets in Resources */,
+				713BC2EE1E3D1E320008616D /* QueSaber.storyboard in Resources */,
 				713BC2E01E3D19710008616D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -142,6 +157,7 @@
 			files = (
 				713BC2DD1E3D19710008616D /* SecondViewController.swift in Sources */,
 				713BC2D91E3D19710008616D /* AppDelegate.swift in Sources */,
+				71F6F6951E3D54F40041BF4F /* ThirdViewController.swift in Sources */,
 				713BC2DB1E3D19710008616D /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -163,6 +179,30 @@
 				713BC2E41E3D19710008616D /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		713BC2EC1E3D1E320008616D /* QueSaber.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				713BC2ED1E3D1E320008616D /* Base */,
+			);
+			name = QueSaber.storyboard;
+			sourceTree = "<group>";
+		};
+		713BC2EF1E3D1E540008616D /* QueHacer.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				713BC2F01E3D1E540008616D /* Base */,
+			);
+			name = QueHacer.storyboard;
+			sourceTree = "<group>";
+		};
+		713BC2F21E3D1E9A0008616D /* ComoProceder.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				713BC2F31E3D1E9A0008616D /* Base */,
+			);
+			name = ComoProceder.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -306,6 +346,7 @@
 				713BC2EB1E3D19710008616D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
