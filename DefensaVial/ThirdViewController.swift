@@ -1,5 +1,5 @@
 //
-//  SecondViewController.swift
+//  ThirdViewController.swift
 //  DefensaVial
 //
 //  Created by EDSON MOISES CORTES MOLINA on 1/28/17.
@@ -10,6 +10,7 @@ import UIKit
 
 class ThirdViewController: UIViewController {
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -19,8 +20,6 @@ class ThirdViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    
     
     
 }

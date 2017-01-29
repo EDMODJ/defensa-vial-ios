@@ -17,6 +17,7 @@
 		713BC2F11E3D1E540008616D /* QueHacer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 713BC2EF1E3D1E540008616D /* QueHacer.storyboard */; };
 		713BC2F41E3D1E9A0008616D /* ComoProceder.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 713BC2F21E3D1E9A0008616D /* ComoProceder.storyboard */; };
 		71F6F6951E3D54F40041BF4F /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F6F6941E3D54F40041BF4F /* ThirdViewController.swift */; };
+		71F6F6971E3D75150041BF4F /* PanicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F6F6961E3D75150041BF4F /* PanicViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		713BC2F01E3D1E540008616D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/QueHacer.storyboard; sourceTree = "<group>"; };
 		713BC2F31E3D1E9A0008616D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ComoProceder.storyboard; sourceTree = "<group>"; };
 		71F6F6941E3D54F40041BF4F /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		71F6F6961E3D75150041BF4F /* PanicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PanicViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 				713BC2D81E3D19710008616D /* AppDelegate.swift */,
 				713BC2DA1E3D19710008616D /* FirstViewController.swift */,
 				713BC2DC1E3D19710008616D /* SecondViewController.swift */,
+				71F6F6961E3D75150041BF4F /* PanicViewController.swift */,
 				71F6F6941E3D54F40041BF4F /* ThirdViewController.swift */,
 				713BC2DE1E3D19710008616D /* Main.storyboard */,
 				713BC2EC1E3D1E320008616D /* QueSaber.storyboard */,
@@ -159,6 +162,7 @@
 				713BC2D91E3D19710008616D /* AppDelegate.swift in Sources */,
 				71F6F6951E3D54F40041BF4F /* ThirdViewController.swift in Sources */,
 				713BC2DB1E3D19710008616D /* FirstViewController.swift in Sources */,
+				71F6F6971E3D75150041BF4F /* PanicViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

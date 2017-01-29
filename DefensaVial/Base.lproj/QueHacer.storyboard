@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -28,12 +29,25 @@
                                     <constraint firstAttribute="width" secondItem="UCw-44-KMX" secondAttribute="height" multiplier="375:128" constant="93.75" id="pWi-G0-AAG"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3C3-px-aUJ">
+                                <rect key="frame" x="62" y="79" width="250" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="3C3-px-aUJ" secondAttribute="height" multiplier="1:1" id="frj-t4-rGQ"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="02_botonPanico"/>
+                                <connections>
+                                    <segue destination="uyH-yz-pdy" kind="presentation" id="4x3-DN-7a3"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="UCw-44-KMX" secondAttribute="trailing" id="Tlq-XS-TRE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="3C3-px-aUJ" secondAttribute="trailing" constant="47" id="hCJ-UU-6jd"/>
+                            <constraint firstItem="3C3-px-aUJ" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" constant="46" id="if7-Xi-8KO"/>
                             <constraint firstItem="UCw-44-KMX" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" id="inB-g2-wiM"/>
                             <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="UCw-44-KMX" secondAttribute="bottom" id="lB9-CZ-HH2"/>
+                            <constraint firstItem="3C3-px-aUJ" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" constant="59" id="vav-P0-Ctj"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>
@@ -43,9 +57,71 @@
             </objects>
             <point key="canvasLocation" x="749.60000000000002" y="359.37031484257875"/>
         </scene>
+        <!--BotonPanico-->
+        <scene sceneID="qhL-QE-iJD">
+            <objects>
+                <viewController storyboardIdentifier="PanicViewController" id="xzB-fj-aW6" userLabel="BotonPanico" customClass="PanicViewController" customModule="DefensaVial" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eHX-2e-7Tg"/>
+                        <viewControllerLayoutGuide type="bottom" id="m22-dn-oYK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="P02-wO-oSh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="00_background_street" translatesAutoresizingMaskIntoConstraints="NO" id="fLf-OO-5aH">
+                                <rect key="frame" x="0.0" y="637" width="375" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="fLf-OO-5aH" secondAttribute="height" multiplier="25:2" id="gFH-lq-cIf"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="fLf-OO-5aH" secondAttribute="trailing" id="5hc-sz-qVc"/>
+                            <constraint firstItem="fLf-OO-5aH" firstAttribute="leading" secondItem="P02-wO-oSh" secondAttribute="leading" id="XUD-jg-9Id"/>
+                            <constraint firstItem="m22-dn-oYK" firstAttribute="top" secondItem="fLf-OO-5aH" secondAttribute="bottom" id="ZUc-Km-jLw"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="¿Qué Hacer?" id="sGb-FM-buD">
+                        <barButtonItem key="rightBarButtonItem" systemItem="stop" id="x3w-qq-V48">
+                            <color key="tintColor" red="0.17254901959999999" green="0.18823529410000001" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="stopRecording:" destination="xzB-fj-aW6" id="Jtr-kt-xov"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="btnClose" destination="x3w-qq-V48" id="g08-OA-Pcs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kr4-mO-e3e" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2591.1999999999998" y="358.4707646176912"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="RN3-Ua-v13">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uyH-yz-pdy" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wnO-EJ-8fP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="xzB-fj-aW6" kind="relationship" relationship="rootViewController" id="88a-UB-Y2D"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tTd-BT-xF8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1652" y="358.4707646176912"/>
+        </scene>
     </scenes>
     <resources>
         <image name="00_background" width="540" height="137"/>
+        <image name="00_background_street" width="540" height="43"/>
+        <image name="02_botonPanico" width="365" height="365"/>
         <image name="second" width="30" height="30"/>
     </resources>
 </document>
