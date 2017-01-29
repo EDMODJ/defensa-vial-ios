@@ -36,6 +36,7 @@
                                 </constraints>
                                 <state key="normal" backgroundImage="02_botonPanico"/>
                                 <connections>
+                                    <action selector="tapRecord:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="utc-1J-uOc"/>
                                     <segue destination="uyH-yz-pdy" kind="presentation" id="4x3-DN-7a3"/>
                                 </connections>
                             </button>
@@ -75,12 +76,21 @@
                                     <constraint firstAttribute="width" secondItem="fLf-OO-5aH" secondAttribute="height" multiplier="25:2" id="gFH-lq-cIf"/>
                                 </constraints>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AA" translatesAutoresizingMaskIntoConstraints="NO" id="Gym-L2-nmo">
+                                <rect key="frame" x="0.0" y="64" width="375" height="526"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Gym-L2-nmo" secondAttribute="height" multiplier="343:381" constant="-98.538057742782144" id="Ka2-cF-EWZ"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="fLf-OO-5aH" secondAttribute="trailing" id="5hc-sz-qVc"/>
+                            <constraint firstItem="Gym-L2-nmo" firstAttribute="leading" secondItem="P02-wO-oSh" secondAttribute="leadingMargin" constant="-16" id="RGs-Mn-ZNx"/>
                             <constraint firstItem="fLf-OO-5aH" firstAttribute="leading" secondItem="P02-wO-oSh" secondAttribute="leading" id="XUD-jg-9Id"/>
                             <constraint firstItem="m22-dn-oYK" firstAttribute="top" secondItem="fLf-OO-5aH" secondAttribute="bottom" id="ZUc-Km-jLw"/>
+                            <constraint firstItem="Gym-L2-nmo" firstAttribute="trailing" secondItem="P02-wO-oSh" secondAttribute="trailingMargin" constant="16" id="fIz-8g-aOf"/>
+                            <constraint firstItem="Gym-L2-nmo" firstAttribute="top" secondItem="eHX-2e-7Tg" secondAttribute="bottom" id="zSP-DH-G0L"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="¿Qué Hacer?" id="sGb-FM-buD">
@@ -122,6 +132,7 @@
         <image name="00_background" width="540" height="137"/>
         <image name="00_background_street" width="540" height="43"/>
         <image name="02_botonPanico" width="365" height="365"/>
+        <image name="AA" width="375" height="509"/>
         <image name="second" width="30" height="30"/>
     </resources>
 </document>

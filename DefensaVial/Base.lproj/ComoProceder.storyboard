@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -28,23 +29,129 @@
                                     <constraint firstAttribute="width" secondItem="LQP-Cp-8Bn" secondAttribute="height" multiplier="125:32" id="or7-rP-Nub"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mHJ-GX-h6y">
+                                <rect key="frame" x="16" y="443" width="343" height="59"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="mHJ-GX-h6y" secondAttribute="height" multiplier="343:59" id="SjX-ba-k4j"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="Comenzar Recurso de Revisión" backgroundImage="btnBlue">
+                                    <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="9Tb-mq-zGz" kind="presentation" id="Me8-V8-t0D"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X2E-NY-E4a">
+                                <rect key="frame" x="251" y="387" width="48" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="X2E-NY-E4a" secondAttribute="height" multiplier="1:1" id="cJj-fP-Kp7"/>
+                                </constraints>
+                                <state key="normal" image="btnPlay"/>
+                                <connections>
+                                    <action selector="playSound:" destination="cIz-V5-LhB" eventType="touchUpInside" id="Et9-wL-Rv9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IZX-jZ-nX1">
+                                <rect key="frame" x="309" y="386" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="IZX-jZ-nX1" secondAttribute="height" multiplier="1:1" id="9ik-T0-QIH"/>
+                                </constraints>
+                                <state key="normal" image="btnStop"/>
+                                <connections>
+                                    <action selector="stopSound:" destination="cIz-V5-LhB" eventType="touchUpInside" id="jrD-CN-0HA"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="mHJ-GX-h6y" firstAttribute="leading" secondItem="eBy-2e-w6r" secondAttribute="leadingMargin" id="0b6-ji-gNE"/>
+                            <constraint firstItem="X2E-NY-E4a" firstAttribute="trailing" secondItem="eBy-2e-w6r" secondAttribute="trailingMargin" constant="-60" id="DZ7-Uv-8Qg"/>
                             <constraint firstItem="buU-e0-tVE" firstAttribute="top" secondItem="LQP-Cp-8Bn" secondAttribute="bottom" id="GtI-bg-CfB"/>
+                            <constraint firstItem="LQP-Cp-8Bn" firstAttribute="top" secondItem="mHJ-GX-h6y" secondAttribute="bottom" constant="20" id="JkT-Hj-Bkh"/>
                             <constraint firstAttribute="trailing" secondItem="LQP-Cp-8Bn" secondAttribute="trailing" id="Ojy-bt-8zn"/>
                             <constraint firstItem="LQP-Cp-8Bn" firstAttribute="leading" secondItem="eBy-2e-w6r" secondAttribute="leading" id="Tmj-BK-BaN"/>
+                            <constraint firstItem="IZX-jZ-nX1" firstAttribute="leading" secondItem="X2E-NY-E4a" secondAttribute="trailing" constant="10" id="UwX-uB-BA3"/>
+                            <constraint firstItem="IZX-jZ-nX1" firstAttribute="trailing" secondItem="eBy-2e-w6r" secondAttribute="trailingMargin" id="VNf-st-cDd"/>
+                            <constraint firstItem="X2E-NY-E4a" firstAttribute="leading" secondItem="eBy-2e-w6r" secondAttribute="leadingMargin" constant="235" id="gUT-Wm-ioi"/>
+                            <constraint firstItem="mHJ-GX-h6y" firstAttribute="top" secondItem="X2E-NY-E4a" secondAttribute="bottom" constant="8" id="ihb-eZ-wUo"/>
+                            <constraint firstItem="mHJ-GX-h6y" firstAttribute="top" secondItem="IZX-jZ-nX1" secondAttribute="bottom" constant="7" id="jrg-aQ-opx"/>
+                            <constraint firstItem="mHJ-GX-h6y" firstAttribute="trailing" secondItem="eBy-2e-w6r" secondAttribute="trailingMargin" id="y5v-1K-pkO"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="uXZ-CO-J17"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="btnPlay" destination="X2E-NY-E4a" id="AqC-VB-vdw"/>
+                        <outlet property="btnStop" destination="IZX-jZ-nX1" id="WBJ-4L-fmi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mQR-7T-mEG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="1041"/>
+            <point key="canvasLocation" x="749.60000000000002" y="1040.3298350824589"/>
+        </scene>
+        <!--Recurso View Controller-->
+        <scene sceneID="ZtC-H1-2vd">
+            <objects>
+                <viewController id="w4C-lU-FgP" customClass="RecursoViewController" customModule="DefensaVial" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3aH-AE-NBo"/>
+                        <viewControllerLayoutGuide type="bottom" id="b5h-sM-N1z"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="i5s-vK-L1Y">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="UlL-tG-ctG">
+                        <nil key="title"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="8g3-Qw-wsq">
+                            <connections>
+                                <action selector="cancelar:" destination="w4C-lU-FgP" id="4qB-sV-moS"/>
+                            </connections>
+                        </barButtonItem>
+                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="4Xl-BG-uS4">
+                            <rect key="frame" x="113" y="7" width="150" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Descargar Formato"/>
+                            <connections>
+                                <action selector="formato:" destination="w4C-lU-FgP" eventType="touchUpInside" id="mXd-9r-jHw"/>
+                            </connections>
+                        </button>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="uw1-Cd-Sb7">
+                            <connections>
+                                <action selector="sendData:" destination="w4C-lU-FgP" id="iO4-A0-7mt"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vZH-f2-AN7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2476" y="1039.4302848575712"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="LQk-YL-cVX">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9Tb-mq-zGz" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hVv-SV-t1k">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="w4C-lU-FgP" kind="relationship" relationship="rootViewController" id="bCm-XL-hXw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tUc-Je-ZDS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1536.8" y="1039.4302848575712"/>
         </scene>
     </scenes>
     <resources>
         <image name="00_background" width="540" height="137"/>
+        <image name="btnBlue" width="20" height="55"/>
+        <image name="btnPlay" width="256" height="256"/>
+        <image name="btnStop" width="256" height="256"/>
     </resources>
 </document>

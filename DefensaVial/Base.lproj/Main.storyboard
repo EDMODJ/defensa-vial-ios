@@ -33,7 +33,7 @@
         <scene sceneID="xeD-ac-U3D">
             <objects>
                 <viewControllerPlaceholder storyboardName="QueSaber" id="tlu-le-Ov3" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="¿Qué Saber?" id="axJ-iD-2Er"/>
+                    <tabBarItem key="tabBarItem" title="¿Qué Saber?" image="second" id="axJ-iD-2Er"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PEi-K3-KBf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -43,7 +43,7 @@
         <scene sceneID="qyp-e5-dg2">
             <objects>
                 <viewControllerPlaceholder storyboardName="QueHacer" id="Ujq-sP-lkZ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="¿Qué Hacer?" id="gDA-89-eKo"/>
+                    <tabBarItem key="tabBarItem" title="¿Qué Hacer?" image="first" id="gDA-89-eKo"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s1Y-FW-FhS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -53,11 +53,15 @@
         <scene sceneID="tzZ-ia-dLr">
             <objects>
                 <viewControllerPlaceholder storyboardName="ComoProceder" id="t6b-et-I0m" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="¿Cómo proceder?" id="daT-4F-2Xj"/>
+                    <tabBarItem key="tabBarItem" title="¿Cómo proceder?" image="second" id="daT-4F-2Xj"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ctf-5N-7W1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="773" y="278"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="first" width="30" height="30"/>
+        <image name="second" width="30" height="30"/>
+    </resources>
 </document>
