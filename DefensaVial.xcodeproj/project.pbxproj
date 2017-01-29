@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		711EF1771E3DD3D60022E79C /* Eureka.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 711EF1761E3DD3D60022E79C /* Eureka.framework */; };
+		711EF17D1E3DE1350022E79C /* RecursoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711EF17C1E3DE1350022E79C /* RecursoViewController.swift */; };
 		713BC2D91E3D19710008616D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713BC2D81E3D19710008616D /* AppDelegate.swift */; };
 		713BC2DB1E3D19710008616D /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713BC2DA1E3D19710008616D /* FirstViewController.swift */; };
 		713BC2DD1E3D19710008616D /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713BC2DC1E3D19710008616D /* SecondViewController.swift */; };
@@ -21,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		711EF1761E3DD3D60022E79C /* Eureka.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Eureka.framework; path = Carthage/Build/iOS/Eureka.framework; sourceTree = "<group>"; };
+		711EF17C1E3DE1350022E79C /* RecursoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecursoViewController.swift; sourceTree = "<group>"; };
 		713BC2D51E3D19710008616D /* DefensaVial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DefensaVial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		713BC2D81E3D19710008616D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		713BC2DA1E3D19710008616D /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -41,17 +45,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				711EF1771E3DD3D60022E79C /* Eureka.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		711EF1751E3DD3D50022E79C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				711EF1761E3DD3D60022E79C /* Eureka.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		713BC2CC1E3D19710008616D = {
 			isa = PBXGroup;
 			children = (
 				713BC2D71E3D19710008616D /* DefensaVial */,
 				713BC2D61E3D19710008616D /* Products */,
+				711EF1751E3DD3D50022E79C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,6 +85,7 @@
 				713BC2DC1E3D19710008616D /* SecondViewController.swift */,
 				71F6F6961E3D75150041BF4F /* PanicViewController.swift */,
 				71F6F6941E3D54F40041BF4F /* ThirdViewController.swift */,
+				711EF17C1E3DE1350022E79C /* RecursoViewController.swift */,
 				713BC2DE1E3D19710008616D /* Main.storyboard */,
 				713BC2EC1E3D1E320008616D /* QueSaber.storyboard */,
 				713BC2EF1E3D1E540008616D /* QueHacer.storyboard */,
@@ -92,6 +107,7 @@
 				713BC2D11E3D19710008616D /* Sources */,
 				713BC2D21E3D19710008616D /* Frameworks */,
 				713BC2D31E3D19710008616D /* Resources */,
+				711EF1781E3DD4590022E79C /* Run Script */,
 			);
 			buildRules = (
 			);
@@ -153,11 +169,30 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		711EF1781E3DD4590022E79C /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Eureka.framework",
+			);
+			name = "Run Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		713BC2D11E3D19710008616D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				711EF17D1E3DE1350022E79C /* RecursoViewController.swift in Sources */,
 				713BC2DD1E3D19710008616D /* SecondViewController.swift in Sources */,
 				713BC2D91E3D19710008616D /* AppDelegate.swift in Sources */,
 				71F6F6951E3D54F40041BF4F /* ThirdViewController.swift in Sources */,
@@ -310,6 +345,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = VHUB294EWE;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = DefensaVial/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mecabotware.defensavial.DefensaVial;
@@ -323,6 +362,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = VHUB294EWE;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = DefensaVial/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mecabotware.defensavial.DefensaVial;
